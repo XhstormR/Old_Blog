@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<style type="text/css">
+		@import url("main.css");
+		body,
+		td,
+		th {
+			font-family: "微软雅黑";
+		}
+
+		::selection {
+			background: #d6edff;
+			color: #222;
+			text-shadow: none;
+		}
+
+		::-webkit-scrollbar-track-piece {
+			background-color: #fff;
+		}
+
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #999;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="backtop"><a href="#">TOP</a></div>
+	<blockquote data-sourcepos="2:1-2:127">
+		<p data-sourcepos="2:3-2:127">Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。——维基百科</p>
+	</blockquote>
+	<!--more-->
+	<blockquote data-sourcepos="6:1-6:35">
+		<p data-sourcepos="6:3-6:35">我把与Markdown相关的基本语法按其类型整理在这里，以便查阅。</p>
+	</blockquote>
+	<h3 data-sourcepos="8:1-8:9">1. 标题</h3>
+	<pre><code data-sourcepos="9:3-15:0"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+	<h3 data-sourcepos="16:1-16:9">2. 列表</h3>
+	<ul data-sourcepos="17:3-20:0">
+		<li data-sourcepos="17:3-17:9">无序列表1</li>
+		<li data-sourcepos="18:3-18:9">无序列表2</li>
+		<li data-sourcepos="19:3-20:0">无序列表3</li>
+	</ul>
+	<ol data-sourcepos="21:3-23:10">
+		<li data-sourcepos="21:3-23:10">有序列表1
+			<ol data-sourcepos="22:3-23:10" start="2">
+				<li data-sourcepos="22:3-22:10">有序列表2</li>
+				<li data-sourcepos="23:3-23:10">有序列表3</li>
+			</ol>
+		</li>
+	</ol>
+	<h3 data-sourcepos="24:1-24:9">3. 引用</h3>
+	<pre><code data-sourcepos="25:3-27:10">&gt; 这个是引用
+&gt; 是不是和电子邮件中的
+&gt; 引用格式很像
+</code></pre>
+	<h3 data-sourcepos="28:1-28:12">4. 粗体与斜体</h3>
+	<pre><code data-sourcepos="29:3-30:9">**这个是粗体**
+*这个是斜体*
+</code></pre>
+	<h3 data-sourcepos="31:1-31:12">5. 链接与图片</h3>
+	<p data-sourcepos="33:1-33:4">自动链接</p>
+	<pre><code data-sourcepos="35:3-37:2">&lt;http://xhstormr.github.io/&gt;
+&lt;XhstormR@foxmail.com&gt;
+</code></pre>
+	<p data-sourcepos="38:1-38:4">插入链接</p>
+	<pre><code data-sourcepos="40:3-44:1">[link text](http://example.com/ &quot;optional title&quot;)
+
+[link text][id]
+[id]: http://example.com/  &quot;optional title here&quot;
+</code></pre>
+	<p data-sourcepos="45:1-45:4">插入图片</p>
+	<pre><code data-sourcepos="47:2-47:65"> ![](/path/to/img.jpg &quot;optional title&quot;){ImgCap}alt text{/ImgCap}
+</code></pre>
+	<p data-sourcepos="48:1-48:4">图片链接</p>
+	<pre><code data-sourcepos="50:2-53:61"> [![][jane-eyre-pic]][jane-eyre-douban]
+
+ [jane-eyre-pic]: http://img3.douban.com/mpic/s1108264.jpg
+ [jane-eyre-douban]: http://book.douban.com/subject/1141406/
+</code></pre>
+	<h3 data-sourcepos="54:1-54:9">6. 代码</h3>
+	<p data-sourcepos="55:1-55:19">用TAB键起始的段落，会被认为是代码块</p>
+	<pre><code data-sourcepos="57:5-59:12">  &lt;php&gt;
+       echo “hello world&quot;;
+  &lt;/php&gt;
+</code></pre>
+	<p data-sourcepos="60:1-60:26">如果在一个行内需要引用代码，只要用反引号`引起来就好</p>
+	<pre><code data-sourcepos="62:3-63:0">Use the `printf()` function.
+</code></pre>
+	<h3 data-sourcepos="64:1-64:14">7. 分割线、删除线</h3>
+	<p data-sourcepos="65:1-65:40">可以在一行中用三个以上的星号、减号、底线来建立一个分隔线,用<code>~</code>可建立删除线。</p>
+	<hr data-sourcepos="67:2-67:4" />
+	<p data-sourcepos="69:3-69:20">~~Mistaken text.~~</p>
+	<h3 data-sourcepos="71:1-71:15">8. 代码块与语法高亮</h3>
+	<pre><code data-sourcepos="73:2-77:5"> ```ruby
+ require 'redcarpet'
+ markdown = Redcarpet.new(&quot;Hello World!&quot;)
+ puts markdown.to_html
+ ```
+</code></pre>
+	<hr data-sourcepos="78:2-78:4" />
+	<h3 data-sourcepos="79:1-79:18">段落、标题、区块代码</h3>
+	<p data-sourcepos="81:1-81:28">区块引用则使用 email 形式的 '<code>&gt;</code>' 角括号。</p>
+	<p data-sourcepos="83:1-83:12">Markdown 语法:</p>
+	<p data-sourcepos="85:2-88:22">A First Level Header ==================== A Second Level Header ---------------------
+	</p>
+	<pre><code data-sourcepos="90:2-104:0">Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.
+
+The quick brown fox jumped over the lazy
+dog's back.
+### Header 3
+
+&gt; This is a blockquote.
+&gt;
+&gt; This is the second paragraph in the blockquote.
+&gt;
+&gt; ## This is an H2 in a blockquote
+</code></pre>
+	<h3 data-sourcepos="105:1-105:13">修辞和强调</h3>
+	<p data-sourcepos="107:1-107:27">Markdown 使用星号和底线来标记需要强调的区段。</p>
+	<p data-sourcepos="109:1-109:12">Markdown 语法:</p>
+	<p data-sourcepos="111:2-114:52">Some of these words <em>are emphasized</em>. Some of these words <em>are emphasized also</em>. Use two asterisks for <strong>strong emphasis</strong>.
+		Or, if you prefer, <strong>use two underscores instead</strong>.</p>
+	<h3 data-sourcepos="116:1-116:10">列表</h3>
+	<p data-sourcepos="118:1-118:42">无序列表使用星号、加号和减号来做为列表的项目标记，这些符号是都可以使用的，使用星号：</p>
+	<ul data-sourcepos="120:2-123:0">
+		<li data-sourcepos="120:2-120:9">Candy.</li>
+		<li data-sourcepos="121:2-121:7">Gum.</li>
+		<li data-sourcepos="122:2-123:0">Booze.</li>
+	</ul>
+	<p data-sourcepos="124:1-124:3">加号：</p>
+	<ul data-sourcepos="126:2-129:0">
+		<li data-sourcepos="126:2-126:9">Candy.</li>
+		<li data-sourcepos="127:2-127:7">Gum.</li>
+		<li data-sourcepos="128:2-129:0">Booze.</li>
+	</ul>
+	<p data-sourcepos="130:1-130:3">和减号</p>
+	<ul data-sourcepos="132:2-135:0">
+		<li data-sourcepos="132:2-132:9">Candy.</li>
+		<li data-sourcepos="133:2-133:7">Gum.</li>
+		<li data-sourcepos="134:2-135:0">Booze.</li>
+	</ul>
+	<p data-sourcepos="136:1-136:12">都会输出 HTML 为：</p>
+	<ul>
+		<li>Candy.</li>
+		<li>Gum.</li>
+		<li>Booze.</li>
+	</ul>
+	<p data-sourcepos="144:1-144:29">有序的列表则是使用一般的数字接着一个英文句点作为项目标记：</p>
+	<ol data-sourcepos="146:2-149:0">
+		<li data-sourcepos="146:2-146:7">Red</li>
+		<li data-sourcepos="147:2-147:9">Green</li>
+		<li data-sourcepos="148:2-149:0">Blue</li>
+	</ol>
+	<p data-sourcepos="150:1-150:10">输出 HTML 为：</p>
+	<ol>
+		<li>Red</li>
+		<li>Green</li>
+		<li>Blue</li>
+	</ol>
+	<h3 data-sourcepos="158:1-158:10">链接</h3>
+	<p data-sourcepos="160:1-160:57">Markdown 支援两种形式的链接语法： <em>行内</em> 和 <em>参考</em> 两种形式，两种都是使用角括号来把文字转成连结。</p>
+	<p data-sourcepos="162:1-162:20">行内形式是直接在后面用括号直接接上链接：</p>
+	<p data-sourcepos="164:2-164:48">This is an <a href="http://example.com/">example link</a>.</p>
+	<p data-sourcepos="166:1-166:20">你也可以选择性的加上 title 属性：</p>
+	<pre><code data-sourcepos="168:2-169:0">This is an [example link](http://example.com/ &quot;With a Title&quot;).
+</code></pre>
+	<p data-sourcepos="170:1-170:42">参考形式的链接让你可以为链接定一个名称，之后你可以在文件的其他地方定义该链接的内容：</p>
+	<pre><code data-sourcepos="172:2-178:0">I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].
+
+[1]: http://google.com/ &quot;Google&quot;
+[2]: http://search.yahoo.com/ &quot;Yahoo Search&quot;
+[3]: http://search.msn.com/ &quot;MSN Search&quot;
+</code></pre>
+	<h3 data-sourcepos="179:1-179:10">图片</h3>
+	<p data-sourcepos="181:1-181:11">图片的语法和链接很像。</p>
+	<p data-sourcepos="183:1-183:18">行内形式（title 是选择性的）：</p>
+	<p data-sourcepos="185:2-185:38"><img src="/path/to/img.jpg" alt="alt text" title="Title" /></p>
+	<p data-sourcepos="187:1-187:5">参考形式：</p>
+	<pre><code data-sourcepos="189:2-193:0">![alt text][id]
+
+[id]: /path/to/img.jpg &quot;Title&quot;
+</code></pre>
+	<h3 data-sourcepos="194:1-194:10">代码</h3>
+	<p data-sourcepos="195:1-195:100">在一般的段落文字中，你可以使用反引号 <code>`</code> 来标记代码区段，区段内的 <code>&amp;</code>、<code>&lt;</code> 和 <code>&gt;</code> 都会被自动的转换成 HTML 实体，这项特性让你可以很容易的在代码区段内插入
+		HTML 码：</p>
+	<p data-sourcepos="197:2-197:55">I strongly recommend against using any <code>&lt;blink&gt;</code> tags.</p>
+	<pre><code data-sourcepos="199:2-201:0">I wish SmartyPants used named entities like `&amp;mdash;`
+instead of decimal-encoded entites like `&amp;#8212;`.
+</code></pre>
+	<p data-sourcepos="202:1-202:79">如果要建立一个已经格式化好的代码区块，只要每行都缩进 4 个空格或是一个 tab 就可以了，而 <code>&amp;</code>、<code>&lt;</code> 和 <code>&gt;</code> 也一样会自动转成 HTML 实体。</p>
+	<p data-sourcepos="204:1-204:12">Markdown 语法:</p>
+	<pre><code data-sourcepos="206:2-211:14">If you want your page to validate under XHTML 1.0 Strict,
+you've got to put paragraph tags in your blockquotes:
+
+&lt;blockquote&gt;
+&lt;p&gt;For example.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+</body>
+
+</html>

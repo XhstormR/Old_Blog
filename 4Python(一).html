@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<style type="text/css">
+		@import url("main.css");
+		body,
+		td,
+		th {
+			font-family: "微软雅黑";
+		}
+		
+		::selection {
+			background: #d6edff;
+			color: #222;
+			text-shadow: none;
+		}
+		
+		::-webkit-scrollbar-track-piece {
+			background-color: #fff;
+		}
+		
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+		
+		::-webkit-scrollbar-thumb {
+			background: #999;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="backtop"><a href="#">TOP</a></div>
+	<h2 data-sourcepos="3:1-3:6">解释器</h2>
+	<p data-sourcepos="4:1-5:8">官方版本的解释器：CPython,但下载的是MSI文件,本人比较洁癖,想用绿色版,绿色方法如下 : 打开CMD，输入
+	</p>
+	<pre><code data-sourcepos="6:1-8:47">msiexec /a &quot;F:\test.msi&quot; /qb TARGETDIR=&quot;F:\dir&quot;
+</code></pre>
+	<p data-sourcepos="9:1-9:36">其中F:\test.msi是msi文件的路径，F:\dir 是解压路径。</p>
+	<h2 data-sourcepos="11:1-11:11">Python版本</h2>
+	<p data-sourcepos="12:1-12:85">我用的是最新版Python_3.4.2,但是选择最新的.不代表是最好的选择。网上的教程大多是2.0版本的,语法跟3.0版本略不同,所以只能跟<a href="https://www.python.org/">官网</a>对比着语法学习。</p>
+	<!--more-->
+	<h2 data-sourcepos="14:1-14:5">语法</h2>
+	<ol data-sourcepos="15:1-20:0">
+		<li data-sourcepos="15:1-17:45"><code>print(123)</code>,输出<code>123</code> 对于英文
+			<code>print(abc)</code>不行,<code>print('abc')</code>就可以,加了<code>''</code>便会视为字符串,输出<code>abc</code> 没加的话,就会视为变量,如果之前没用到
+			<code>abc=input()</code>为变量赋值的话,便会报错.</li>
+		<li data-sourcepos="18:1-20:0"><code>name=input(mike)</code>,为<code>name</code>赋值为<code>mike</code> 跟语法1相结合我们可以先用
+			<code>name=input()</code>赋值为<code>mike</code>,再输入<code>print('hello',name)</code>,便会得到<code>hello,mike</code></li>
+	</ol>
+	<p data-sourcepos="20:1-20:33"><img src="uploads/python1.png" alt="print(123)+name=input(mike)" /></p>
+	<p data-sourcepos="23:1-23:84">另外我们可以这样输入<code>name=input('please enter your name:')</code>便会有提示信息<code>please enter your name:</code>显示.</p>
+	<p data-sourcepos="24:1-24:29"><img src="uploads/python2.png" alt="please enter your name:" /></p>
+</body>
+
+</html>
